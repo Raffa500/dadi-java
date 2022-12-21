@@ -13,7 +13,7 @@ import java.awt.Graphics;
  */
 public class dadi extends javax.swing.JFrame {
 
-    /**
+    /**            
      * Creates new form dadi
      */
     public dadi() {
@@ -46,7 +46,7 @@ public class dadi extends javax.swing.JFrame {
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(0, 255, 50));
 
-        jPanel2.setBackground(new java.awt.Color(0, 255, 50));
+        jPanel2.setBackground(new java.awt.Color(0, 175, 50));
 
         jButton1.setText("Lancia il dado");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -190,11 +190,10 @@ public class dadi extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+ int somma1=0,somma2=0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int N1 = (int) (Math.random()*6+1);
         int N2 = (int) (Math.random()*6+1);
-        int somma1=0,somma2=0;
         jTextField3.setText(String.valueOf(N1));
         jTextField4.setText(String.valueOf(N2));
         N1=Integer.parseInt(jTextField3.getText());
@@ -208,6 +207,10 @@ public class dadi extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int N1 = 0;
         int N2 = 0;
+        somma1 = 0;
+        somma2 = 0;
+        jTextField1.setText(String.valueOf(somma1));
+        jTextField2.setText(String.valueOf(somma2));
         jTextField3.setText(String.valueOf(N1));
         jTextField4.setText(String.valueOf(N2));
     }//GEN-LAST:event_jButton2ActionPerformed
